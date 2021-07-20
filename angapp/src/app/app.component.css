@@ -15,23 +15,28 @@ body{
     text-shadow: 2px 2px rgb(238, 191, 191);
     background-color: cornsilk;
 }
-nav{
+li{
+    float: left;
+    
+}
+li a {
+    display: block;
     text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+ul{
+    list-style-type: none;
+    margin: 0;
+    overflow: hidden;
+}
+.emp1{
+    width: 100%;
+    background-color: cyan;
 }
 .emp{
     background-color: chartreuse;
-    margin: 0%;
-    padding: 10px;
 }
-.emp1{
-    margin: 0%;
-    padding-top: 20px;
-    width: 100%;
-    height: 650px;
-    background-color: cyan;
-}
-
-.emp:hover{
+li:hover{
     background-color: rgb(231, 150, 150);
 }
-

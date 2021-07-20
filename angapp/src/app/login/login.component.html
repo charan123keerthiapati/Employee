@@ -1,0 +1,13 @@
+<div class="login1">
+  <div class="login">
+    <h1>LOGIN PAGE</h1>
+  </div>
+  <form class="forms" #userForm="ngForm" (ngSubmit)="checkUser(userForm.value)"> 
+    <label>UserName:</label><br>
+    <input type="text" placeholder="Enter Emp email" name="username" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required ngModel><br>
+    <label>Password:</label><br>
+    <input type="password" placeholder="Enter Password" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required ngModel><br><br>
+    <input type="Submit" name="submit"><br><br>
+    <a routerLink="">forgot Password</a>
+  </form>
+</div>

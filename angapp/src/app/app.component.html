@@ -2,10 +2,14 @@
   <img [src]="myimage">
    <h1>EMPLOYEE APPLICATION</h1>
 </div>
-<div class="emp1">   
-    <nav>
-        <a href=""><button class="emp">HOME</button></a>
-        <a href=""><button class="emp">ADD EMPLOYEE</button></a>
-        <a href=""><button class="emp">EMPLOYEES</button></a>
-    </nav>
+<div class="emp1">
+  <div class="emp">   
+    <ul>
+      <li><a routerLink="/HOME">HOME</a></li>
+      <li><a routerLink="/ADDEMPLOYEE">ADD EMPLOYEE</a></li>
+      <li><a routerLink="/EMPLOYEES">EMPLOYEES</a></li>
+      <li><a routerLink="/LOGIN">LOGIN</a></li>
+    </ul>
+  </div>
 </div>
+<router-outlet></router-outlet>
