@@ -1,41 +1,57 @@
-<div>
-    <div class="empadd">
-        <h1>EMPLOYEE REGISTRATION FORM</h1>
-      </div>
-    <form #userForm="ngForm">
+<div class="empadd">
+    <h1>EMPLOYEE REGISTRATION FORM</h1>
+</div>
+<form #userForm="ngForm" (ngSubmit)="onSubmit()">
+    <div >
         <label>First Name:</label>
-        <input type="text" name="fname" placeholder="Enter Fname" ngModel required><br><br>
+        <input type="text" name="fname"  placeholder="Enter Fname" [(ngModel)]="userForm.firstname" required>
+    </div>
+    <div >
         <label>Last Name:</label>
-        <input type="text" name="lname" placeholder="Enter Lname" ngModel required><br><br>
+        <input type="text" name="lname" placeholder="Enter Lname" [(ngModel)]="userForm.lastname" required>
+    </div>
+    <div >
         <label>UserName:</label>
-        <input type="text" name="uname" placeholder="Enter Username" ngModel required><br><br>
-        <label>Address:</label>
-        <input type="text" name="address" placeholder="Enter Address" ngModel required><br><br>
+        <input type="text" name="uname" placeholder="Enter Username" [(ngModel)]="userForm.username" required >
+    </div>
+    <div >
+        <label>Password:</label>
+        <input type="password" name="password" placeholder="Enter password" [(ngModel)]="userForm.password" required>
+    </div>
+    <div >
         <label>Gender:</label>
-        <input type="radio" name="gender" value="male">
+        <input type="radio" name="gender" value="male" [(ngModel)]="userForm.gender">
         <label for="male">Male</label>
-        <input type="radio" name="gender" value="female">
-        <label for="female">Female</label><br><br>
+        <input type="radio" name="gender" value="female" [(ngModel)]="userForm.gender">
+        <label for="female">Female</label>
+    </div> 
+    <div >
         <label>Phone:</label>
-        <input type="number" name="phone" placeholder="Enter Phone" ngModel required><br><br>
+        <input type="number" name="phone"  placeholder="Enter Phone" [(ngModel)]="userForm.phone" required>
+    </div>
+   <div>
         <label>Technologies:</label>
-        <input type="checkbox" name="tech1" value="Java">
+        <input type="checkbox" name="tech1" value="Java" [(ngModel)]="userForm.Technologies1">
         <label for="tech1"> Java</label>
-        <input type="checkbox" name="tech2" value="Angular">
+        <input type="checkbox" name="tech2" value="Angular" [(ngModel)]="userForm.Technologies2">
         <label for="tech2">Angular</label>
-        <input type="checkbox" name="tech3" value="AWS">
+        <input type="checkbox" name="tech3" value="AWS" [(ngModel)]="userForm.Technologies3">
         <label for="tech3">AWS</label>
-        <input type="checkbox" name="tech4" value="python">
-        <label for="tech4">Python</label><br><br>
+        <input type="checkbox" name="tech4" value="python" [(ngModel)]="userForm.Technologies4">
+        <label for="tech4">Python</label>
+    </div>
+    <div >
         <label for="country">Country:</label>
         <select name="country">
-            <option value="India">India</option>
-            <option value="United Kingdom">United Kingdom</option>
-            <option value="Germany">Germany</option>
-            <option value="Australia">Australia</option>
-            <option value="New Zealand">New Zealand</option>
-        </select><br><br>
-        <button>Register</button>
+            <option value="India" name="country1" ngDefaultControl [(ngModel)]="userForm.country">India</option>
+            <option value="United Kingdom" name="country1" ngDefaultControl [(ngModel)]="userForm.country">United Kingdom</option>
+            <option value="Germany" name="country1" ngDefaultControl [(ngModel)]="userForm.country">Germany</option>
+            <option value="Australia" name="country1" ngDefaultControl [(ngModel)]="userForm.country">Australia</option>
+            <option value="New Zealand" name="country1" ngDefaultControl [(ngModel)]="userForm.country">New Zealand</option>
+        </select>
+    </div> 
+    <div>
+        <button type="submit" name="submit">Register</button>
         <input type="Reset" name="reset">
-    </form>
-</div>
+    </div>
+</form>
