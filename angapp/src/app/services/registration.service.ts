@@ -21,8 +21,5 @@ export class RegistrationService {
   loginUser(){
     return this.httpClient.get(this.url)
   }
-  a=this.loginUser();
-  loginUsers(){
-    return this.a;
-  }
+
 }
