@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { RegistrationService } from '../registration.service';
-import { User } from '../user';
+import { RegistrationService } from '../services/registration.service';
+import { FormGroup,FormControl } from '@angular/forms';
+import { Router } from '@angular/router';
+
 @Component({
   selector: 'app-addemp',
   templateUrl: './addemp.component.html',
@@ -8,17 +10,24 @@ import { User } from '../user';
 })
 export class AddempComponent implements OnInit {
 
- userModel=new User('charan','keerthipati','charan123keerthipati@gmail.com','Charan',8886475512);
-  constructor(private registrationService:RegistrationService) { }
+  register=new FormGroup({
+    fname:new FormControl(''),
+    lname:new FormControl(''),
+    email:new FormControl(''),
+    password:new FormControl(''),
+    phone:new FormControl(''),
+    address:new FormControl('')
+  })
+  constructor(public router:Router,private registrationService:RegistrationService) { }
 
   ngOnInit() {
   }
   onSubmit(){
-    this.registrationService.enroll(this.userModel)
-    .subscribe(
-      data=> console.log('success!',data),
-      error=>console.error('Error!',error)
-      
-    )
+    console.log("Registration Successfull")
+    // console.warn(this.addUser.value)
+    this.registrationService.sendData(this.register.value).subscribe((data)=>{
+      console.log("success",data)
+      alert("Registration succesful")
+    })
   }
 }

@@ -1,0 +1,32 @@
+{
+  "employees": [
+    {
+      "fname": "cherry",
+      "lname": "kumar",
+      "email": "charan@gmail,com",
+      "password": "123",
+      "phone": 1234567890,
+      "address": "tpt",
+      "id": 1
+    },
+    {
+      "fname": "kiran",
+      "lname": "kittu",
+      "email": "kittu@gmail.com",
+      "password": "456",
+      "phone": 7147852369,
+      "address": "kdr",
+      "id": 2
+    },
+    {
+      "fname": "jaya",
+      "lname": "raj",
+      "email": "jaya@gmai.com",
+      "password": "2580",
+      "phone": 6547893215,
+      "address": "vellore",
+      "id": 3
+    }
+    
+  ]
+}

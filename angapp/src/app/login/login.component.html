@@ -2,14 +2,17 @@
   <div class="login">
     <h1>LOGIN PAGE</h1>
   </div>
-  <form class="forms" #userForm="ngForm" (ngSubmit)="onSubmit(userForm.value)"> 
-    <label>UserName:</label><br>
-    <input type="text" placeholder="Enter Emp email" name="username"  ngModel required><br>
-    <label>Password:</label><br>
-    <input type="password" placeholder="Enter Password" name="password" ngModel required><br><br>
-    <input type="Submit" name="submit">
+  <form class="forms" #loginUser="ngForm" (ngSubmit)="checkUser(loginUser.value)"> 
+    <div class="form-group">
+       <label>Email:</label><br>
+       <input type="text" placeholder="Enter Emp email" name="email" class="form-control" ngModel required><br>
+    </div>
+    <div class="form-group">
+        <label>Password:</label><br>
+        <input type="password" placeholder="Enter Password" name="password" class="form-control" ngModel required><br><br>
+    </div>
+    <button type="submit">Login</button><br>
     <input type="Reset" name="reset"><br><br>
-    <a routerLink="/ADDEMPLOYEE">EMP REGISTRATION</a><br>
-    <a routerLink="">forgot Password</a>
+    <a routerLink="/ADDEMPLOYEE">EMP REGISTRATION</a>
   </form>
 </div>
