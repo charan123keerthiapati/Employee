@@ -6,6 +6,7 @@ import { HomeComponent } from './home/home.component';
 import { EmployeesComponent } from './employees/employees.component';
 import { AdminComponent } from './admin/admin.component';
 import { UserComponent } from './user/user.component';
+import { UpdateComponent } from './update/update.component';
 
 const routes: Routes = [
     {path:'HOME',component:HomeComponent},
@@ -13,7 +14,8 @@ const routes: Routes = [
     {path:'LOGIN',component:LoginComponent},
     {path:'admin',component:AdminComponent},
     {path:'employees',component:EmployeesComponent},
-    {path:'user',component:UserComponent}
+    {path:'user',component:UserComponent},
+    {path:'update/:id',component:UpdateComponent}
   ];
     
 

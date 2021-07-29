@@ -12,6 +12,7 @@ import { HomeComponent } from './home/home.component';
 import { EmployeesComponent } from './employees/employees.component';
 import { AdminComponent } from './admin/admin.component';
 import { UserComponent } from './user/user.component';
+import { UpdateComponent } from './update/update.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { UserComponent } from './user/user.component';
     HomeComponent,
     EmployeesComponent,
     AdminComponent,
-    UserComponent
+    UserComponent,
+    UpdateComponent
   ],
   imports: [
     BrowserModule,

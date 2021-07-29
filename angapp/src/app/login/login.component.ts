@@ -24,7 +24,7 @@ export class LoginComponent implements OnInit {
       sessionStorage.setItem("name",email);
       this.router.navigate(['user'])
     }
-    else if(email=="admin123" && password=="admin123")
+    else if(email=="admin123@gmail.com" && password=="admin123")
     {
       console.log("Login Successfull")
       console.log(email)

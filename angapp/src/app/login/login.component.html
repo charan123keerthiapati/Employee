@@ -1,18 +1,18 @@
-<div class="login1">
-  <div class="login">
-    <h1>LOGIN PAGE</h1>
-  </div>
-  <form class="forms" #loginUser="ngForm" (ngSubmit)="checkUser(loginUser.value)"> 
+<div class="login">
+  <h1>LOGIN PAGE</h1>
+</div>
+<div class="col-sm-6" id="log">
+  <form #loginUser="ngForm" (ngSubmit)="checkUser(loginUser.value)" ngNativeValidate> 
     <div class="form-group">
        <label>Email:</label><br>
-       <input type="text" placeholder="Enter Emp email" name="email" class="form-control" ngModel required><br>
+       <input type="email" #email="ngModel" placeholder="Enter Emp email" name="email" class="form-control" ngModel required><br>
     </div>
     <div class="form-group">
         <label>Password:</label><br>
-        <input type="password" placeholder="Enter Password" name="password" class="form-control" ngModel required><br><br>
+        <input type="password" #password="ngModel"  placeholder="Enter Password" name="password" class="form-control" ngModel required><br><br>
     </div>
-    <button type="submit">Login</button>
-    <button type="reset" name="reset">Reset</button><br><br>
+    <button type="submit" class="btn btn-primary">Login</button>
+    <button type="reset" name="reset" class="btn btn-primary">Reset</button><br><br>
     <a routerLink="/ADDEMPLOYEE">EMP REGISTRATION</a>
   </form>
 </div>

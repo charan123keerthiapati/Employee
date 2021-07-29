@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { RegistrationService } from '../services/registration.service';
-import { FormGroup,FormControl } from '@angular/forms';
+ 
 import { Router } from '@angular/router';
 
 @Component({
@@ -10,22 +10,22 @@ import { Router } from '@angular/router';
 })
 export class AddempComponent implements OnInit {
 
-  register=new FormGroup({
-    fname:new FormControl(''),
-    lname:new FormControl(''),
-    email:new FormControl(''),
-    password:new FormControl(''),
-    phone:new FormControl(''),
-    address:new FormControl('')
-  })
+  register={
+    fname:'',
+    lname:'',
+    email:'',
+    password:'',
+    phone:'',
+    address:''
+  }
   constructor(public router:Router,private registrationService:RegistrationService) { }
 
   ngOnInit() {
   }
-  onSubmit(){
+  onSubmit(user){
     console.log("Registration Successfull")
     // console.warn(this.addUser.value)
-    this.registrationService.sendData(this.register.value).subscribe((data)=>{
+    this.registrationService.sendData(user).subscribe((data)=>{
       console.log("success",data)
       alert("Registration succesful")
     })

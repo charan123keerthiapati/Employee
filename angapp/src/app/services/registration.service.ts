@@ -21,5 +21,13 @@ export class RegistrationService {
   loginUser(){
     return this.httpClient.get(this.url)
   }
-
+  deleteEmployee(id){
+    return this.httpClient.delete(`${this.url}/${id}`)
+  }
+  getEmployee(id){
+    return this.httpClient.get(`${this.url}/${id}`)
+  }
+  updateEmployee(id,data){
+    return this.httpClient.put(`${this.url}/${id}`,data)
+  }
 }
